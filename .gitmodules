@@ -1,0 +1,10 @@
+[submodule "LookinPro/ReactiveObjC"]
+	path = LookinPro/ReactiveObjC
+	url = https://github.com/ReactiveCocoa/ReactiveObjC.git
+[submodule "LookinPro/LookinServer"]
+	path = LookinPro/LookinServer
+	url = https://github.com/QMUI/LookinServer.git
+	branch = develop
+[submodule "LookinPro/Sparkle"]
+	path = LookinPro/Sparkle
+	url = https://github.com/sparkle-project/Sparkle
