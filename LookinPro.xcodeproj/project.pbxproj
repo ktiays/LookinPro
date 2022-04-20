@@ -188,10 +188,12 @@
 		355F5279280D53000002B1C3 /* LookinHierarchyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 355F5255280D53000002B1C3 /* LookinHierarchyInfo.m */; };
 		355F527A280D53000002B1C3 /* LookinDashboardBlueprint.m in Sources */ = {isa = PBXBuildFile; fileRef = 355F5256280D53000002B1C3 /* LookinDashboardBlueprint.m */; };
 		355F527D280D53180002B1C3 /* LookinClient_Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 355F527B280D53180002B1C3 /* LookinClient_Info.plist */; };
-		355F5297280D53FA0002B1C3 /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355F5289280D53ED0002B1C3 /* ReactiveObjC.framework */; };
-		355F52D5280D5A050002B1C3 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355F52B2280D59FF0002B1C3 /* Sparkle.framework */; };
 		355F52D8280D5AE50002B1C3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 355F52DA280D5AE50002B1C3 /* MainMenu.xib */; };
 		355F52DD280D5B420002B1C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 355F52DF280D5B420002B1C3 /* Localizable.strings */; };
+		EDEC0E5E28106F2E00BCC2C5 /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355F5289280D53ED0002B1C3 /* ReactiveObjC.framework */; };
+		EDEC0E5F28106F2E00BCC2C5 /* ReactiveObjC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 355F5289280D53ED0002B1C3 /* ReactiveObjC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EDEC0E6028106F2E00BCC2C5 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355F52B2280D59FF0002B1C3 /* Sparkle.framework */; };
+		EDEC0E6128106F2E00BCC2C5 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 355F52B2280D59FF0002B1C3 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -371,6 +373,21 @@
 			remoteInfo = ed25519;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EDEC0E6228106F2E00BCC2C5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EDEC0E5F28106F2E00BCC2C5 /* ReactiveObjC.framework in Embed Frameworks */,
+				EDEC0E6128106F2E00BCC2C5 /* Sparkle.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3557AE63280D5166000D7568 /* LookinPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LookinPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -754,8 +771,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				355F52D5280D5A050002B1C3 /* Sparkle.framework in Frameworks */,
-				355F5297280D53FA0002B1C3 /* ReactiveObjC.framework in Frameworks */,
+				EDEC0E5E28106F2E00BCC2C5 /* ReactiveObjC.framework in Frameworks */,
+				EDEC0E6028106F2E00BCC2C5 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1446,6 +1463,7 @@
 				3557AE5F280D5166000D7568 /* Sources */,
 				3557AE60280D5166000D7568 /* Frameworks */,
 				3557AE61280D5166000D7568 /* Resources */,
+				EDEC0E6228106F2E00BCC2C5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

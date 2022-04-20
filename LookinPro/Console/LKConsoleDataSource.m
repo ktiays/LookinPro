@@ -66,15 +66,15 @@
     if (![LKAppsManager sharedInstance].inspectingApp) {
         return [RACSignal error:LookinErr_NoConnect];
     }
-    if ([text containsString:@":"]) {
-        NSString *className = self.currentObject.completedSelfClassName;
-        NSString *address = self.currentObject.memoryAddress;
-        NSString *errDesc = [NSString stringWithFormat:NSLocalizedString(@"You can click \"Pause\" button near the bottom-left corner in Xcode to pause your iOS app, and input in Xcode console like the contents below:\nexpr [((%@ *)%@) %@]", nil), className, address, text];
-        return [RACSignal error:LookinErrorMake(NSLocalizedString(@"Lookin doesn't support invoking methods with arguments yet.", nil), errDesc)];
-    }
-    if ([text containsString:@"."]) {
-        return [RACSignal error:LookinErrorMake(NSLocalizedString(@"Lookin doesn't support this syntax yet. Please input a method or property name.", nil), @"")];
-    }
+//    if ([text containsString:@":"]) {
+//        NSString *className = self.currentObject.completedSelfClassName;
+//        NSString *address = self.currentObject.memoryAddress;
+//        NSString *errDesc = [NSString stringWithFormat:NSLocalizedString(@"You can click \"Pause\" button near the bottom-left corner in Xcode to pause your iOS app, and input in Xcode console like the contents below:\nexpr [((%@ *)%@) %@]", nil), className, address, text];
+//        return [RACSignal error:LookinErrorMake(NSLocalizedString(@"Lookin doesn't support invoking methods with arguments yet.", nil), errDesc)];
+//    }
+//    if ([text containsString:@"."]) {
+//        return [RACSignal error:LookinErrorMake(NSLocalizedString(@"Lookin doesn't support this syntax yet. Please input a method or property name.", nil), @"")];
+//    }
     @weakify(self);
     return [[[LKAppsManager sharedInstance].inspectingApp invokeMethodWithOid:self.currentObject.oid text:text] doNext:^(NSDictionary *dict) {
         NSString *returnDescription = dict[@"description"];        
