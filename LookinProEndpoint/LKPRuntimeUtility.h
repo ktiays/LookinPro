@@ -13,8 +13,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef _Nonnull id(^LKPMethodInterceptor)(IMP origIMP);
 
-extern void lkp_interceptMethod(Class cls, SEL sel, LKPMethodInterceptor interceptor);
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-extern void lkp_classAddMethod(Class cls, SEL sel, id block, const char *typeEncoding);
+void lkp_interceptMethod(Class cls, SEL sel, LKPMethodInterceptor interceptor);
+
+void lkp_classAddMethod(Class cls, SEL sel, id block, const char *typeEncoding);
+
+BOOL __pointer_is_readable(const void * ptr);
+
+BOOL __pointer_is_valid_objc_object(const void * ptr);
+
+#ifdef __cplusplus
+}
+#endif
 
 NS_ASSUME_NONNULL_END

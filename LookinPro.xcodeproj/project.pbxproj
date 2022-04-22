@@ -22,7 +22,7 @@
 		35128C102812B19700814BBF /* OJSObjCValueType.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35128C092812B19700814BBF /* OJSObjCValueType.mm */; };
 		35128C112812B19700814BBF /* OJSMsgSendableProxyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 35128C0A2812B19700814BBF /* OJSMsgSendableProxyBuilder.m */; };
 		35128C122812B19700814BBF /* OJSProxyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 35128C0C2812B19700814BBF /* OJSProxyBuilder.m */; };
-		35128C152812B1D700814BBF /* LKPRuntimeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 35128C132812B1D700814BBF /* LKPRuntimeUtility.m */; };
+		35128C152812B1D700814BBF /* LKPRuntimeUtility.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35128C132812B1D700814BBF /* LKPRuntimeUtility.mm */; };
 		3557AE68280D5166000D7568 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3557AE67280D5166000D7568 /* AppDelegate.m */; };
 		3557AE6D280D5168000D7568 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3557AE6C280D5168000D7568 /* Assets.xcassets */; };
 		3557AE72280D5168000D7568 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3557AE71280D5168000D7568 /* main.m */; };
@@ -433,7 +433,7 @@
 		35128C0B2812B19700814BBF /* OJSSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJSSugar.h; sourceTree = "<group>"; };
 		35128C0C2812B19700814BBF /* OJSProxyBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJSProxyBuilder.m; sourceTree = "<group>"; };
 		35128C0D2812B19700814BBF /* OJSObjCValueType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJSObjCValueType.h; sourceTree = "<group>"; };
-		35128C132812B1D700814BBF /* LKPRuntimeUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKPRuntimeUtility.m; sourceTree = "<group>"; };
+		35128C132812B1D700814BBF /* LKPRuntimeUtility.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LKPRuntimeUtility.mm; sourceTree = "<group>"; };
 		35128C142812B1D700814BBF /* LKPRuntimeUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKPRuntimeUtility.h; sourceTree = "<group>"; };
 		3557AE63280D5166000D7568 /* LookinPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LookinPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3557AE66280D5166000D7568 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -842,7 +842,7 @@
 				35128BCB2812B12600814BBF /* ViewController.h */,
 				35128BCC2812B12600814BBF /* ViewController.m */,
 				35128C142812B1D700814BBF /* LKPRuntimeUtility.h */,
-				35128C132812B1D700814BBF /* LKPRuntimeUtility.m */,
+				35128C132812B1D700814BBF /* LKPRuntimeUtility.mm */,
 				35128BFB2812B18600814BBF /* LookinInterceptor */,
 				35128C022812B19700814BBF /* OJS */,
 				35128BCE2812B12600814BBF /* Main.storyboard */,
@@ -868,17 +868,17 @@
 		35128C022812B19700814BBF /* OJS */ = {
 			isa = PBXGroup;
 			children = (
-				35128C032812B19700814BBF /* ObjectiveJSEngine.h */,
-				35128C042812B19700814BBF /* OJSProxyObject.m */,
-				35128C052812B19700814BBF /* OJSMsgSendableProxyBuilder.h */,
-				35128C062812B19700814BBF /* OJSProxyBuilder.h */,
-				35128C072812B19700814BBF /* OJSProxyObject.h */,
-				35128C082812B19700814BBF /* ObjectiveJSEngine.m */,
-				35128C092812B19700814BBF /* OJSObjCValueType.mm */,
-				35128C0A2812B19700814BBF /* OJSMsgSendableProxyBuilder.m */,
 				35128C0B2812B19700814BBF /* OJSSugar.h */,
+				35128C032812B19700814BBF /* ObjectiveJSEngine.h */,
+				35128C082812B19700814BBF /* ObjectiveJSEngine.m */,
+				35128C052812B19700814BBF /* OJSMsgSendableProxyBuilder.h */,
+				35128C0A2812B19700814BBF /* OJSMsgSendableProxyBuilder.m */,
+				35128C062812B19700814BBF /* OJSProxyBuilder.h */,
 				35128C0C2812B19700814BBF /* OJSProxyBuilder.m */,
+				35128C072812B19700814BBF /* OJSProxyObject.h */,
+				35128C042812B19700814BBF /* OJSProxyObject.m */,
 				35128C0D2812B19700814BBF /* OJSObjCValueType.h */,
+				35128C092812B19700814BBF /* OJSObjCValueType.mm */,
 			);
 			path = OJS;
 			sourceTree = "<group>";
@@ -1864,7 +1864,7 @@
 				35128BCD2812B12600814BBF /* ViewController.m in Sources */,
 				35128BC72812B12600814BBF /* AppDelegate.m in Sources */,
 				35128C122812B19700814BBF /* OJSProxyBuilder.m in Sources */,
-				35128C152812B1D700814BBF /* LKPRuntimeUtility.m in Sources */,
+				35128C152812B1D700814BBF /* LKPRuntimeUtility.mm in Sources */,
 				35128BD82812B12900814BBF /* main.m in Sources */,
 				35128C0F2812B19700814BBF /* ObjectiveJSEngine.m in Sources */,
 				35128C002812B18600814BBF /* LKAppInfoInterceptor.m in Sources */,
