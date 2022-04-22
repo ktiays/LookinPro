@@ -6,7 +6,7 @@
 //  https://lookin.work
 //
 
-#import <Foundation/Foundation.h>
+#import <AppKit/AppKit.h>
 #import "LookinAppInfo.h"
 #import "LookinAttributeModification.h"
 #import "LookinAttributesGroup.h"
@@ -53,5 +53,7 @@
 #pragma mark - Push From iOS
 
 - (void)handleMethodTraceRecord:(LookinMethodTraceRecord *)record;
+
+- (NSImage *)deviceIcon;
 
 @end

@@ -1,10 +1,10 @@
-[submodule "LookinPro/LookinServer"]
-	path = LookinPro/LookinServer
-	url = https://github.com/QMUI/LookinServer.git
-	branch = develop
 [submodule "LookinPro/Sparkle"]
 	path = LookinPro/Sparkle
 	url = https://github.com/sparkle-project/Sparkle
 [submodule "LookinPro/ReactiveObjC"]
 	path = LookinPro/ReactiveObjC
 	url = git@github.com:ktiays/ReactiveObjC.git
+[submodule "LookinPro/LookinServer"]
+	path = LookinPro/LookinServer
+	url = git@github.com:ktiays/LookinServer.git
+	branch = develop

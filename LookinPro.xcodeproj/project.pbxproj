@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35128BC72812B12600814BBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35128BC62812B12600814BBF /* AppDelegate.m */; };
+		35128BCA2812B12600814BBF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35128BC92812B12600814BBF /* SceneDelegate.m */; };
+		35128BCD2812B12600814BBF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35128BCC2812B12600814BBF /* ViewController.m */; };
+		35128BD02812B12600814BBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35128BCE2812B12600814BBF /* Main.storyboard */; };
+		35128BD22812B12900814BBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35128BD12812B12900814BBF /* Assets.xcassets */; };
+		35128BD52812B12900814BBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35128BD32812B12900814BBF /* LaunchScreen.storyboard */; };
+		35128BD82812B12900814BBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35128BD72812B12900814BBF /* main.m */; };
+		35128BFA2812B15E00814BBF /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 35128BF92812B15E00814BBF /* LookinServer */; };
+		35128C002812B18600814BBF /* LKAppInfoInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 35128BFD2812B18600814BBF /* LKAppInfoInterceptor.m */; };
+		35128C012812B18600814BBF /* LKRequestInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 35128BFF2812B18600814BBF /* LKRequestInterceptor.m */; };
+		35128C0E2812B19700814BBF /* OJSProxyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 35128C042812B19700814BBF /* OJSProxyObject.m */; };
+		35128C0F2812B19700814BBF /* ObjectiveJSEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 35128C082812B19700814BBF /* ObjectiveJSEngine.m */; };
+		35128C102812B19700814BBF /* OJSObjCValueType.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35128C092812B19700814BBF /* OJSObjCValueType.mm */; };
+		35128C112812B19700814BBF /* OJSMsgSendableProxyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 35128C0A2812B19700814BBF /* OJSMsgSendableProxyBuilder.m */; };
+		35128C122812B19700814BBF /* OJSProxyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 35128C0C2812B19700814BBF /* OJSProxyBuilder.m */; };
+		35128C152812B1D700814BBF /* LKPRuntimeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 35128C132812B1D700814BBF /* LKPRuntimeUtility.m */; };
 		3557AE68280D5166000D7568 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3557AE67280D5166000D7568 /* AppDelegate.m */; };
 		3557AE6D280D5168000D7568 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3557AE6C280D5168000D7568 /* Assets.xcassets */; };
 		3557AE72280D5168000D7568 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3557AE71280D5168000D7568 /* main.m */; };
@@ -390,6 +406,35 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		35128BC32812B12600814BBF /* LookinProEndpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LookinProEndpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35128BC52812B12600814BBF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		35128BC62812B12600814BBF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		35128BC82812B12600814BBF /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		35128BC92812B12600814BBF /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		35128BCB2812B12600814BBF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		35128BCC2812B12600814BBF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		35128BCF2812B12600814BBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		35128BD12812B12900814BBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		35128BD42812B12900814BBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		35128BD62812B12900814BBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35128BD72812B12900814BBF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		35128BFC2812B18600814BBF /* LKRequestInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKRequestInterceptor.h; sourceTree = "<group>"; };
+		35128BFD2812B18600814BBF /* LKAppInfoInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKAppInfoInterceptor.m; sourceTree = "<group>"; };
+		35128BFE2812B18600814BBF /* LKAppInfoInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKAppInfoInterceptor.h; sourceTree = "<group>"; };
+		35128BFF2812B18600814BBF /* LKRequestInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKRequestInterceptor.m; sourceTree = "<group>"; };
+		35128C032812B19700814BBF /* ObjectiveJSEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveJSEngine.h; sourceTree = "<group>"; };
+		35128C042812B19700814BBF /* OJSProxyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJSProxyObject.m; sourceTree = "<group>"; };
+		35128C052812B19700814BBF /* OJSMsgSendableProxyBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJSMsgSendableProxyBuilder.h; sourceTree = "<group>"; };
+		35128C062812B19700814BBF /* OJSProxyBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJSProxyBuilder.h; sourceTree = "<group>"; };
+		35128C072812B19700814BBF /* OJSProxyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJSProxyObject.h; sourceTree = "<group>"; };
+		35128C082812B19700814BBF /* ObjectiveJSEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveJSEngine.m; sourceTree = "<group>"; };
+		35128C092812B19700814BBF /* OJSObjCValueType.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OJSObjCValueType.mm; sourceTree = "<group>"; };
+		35128C0A2812B19700814BBF /* OJSMsgSendableProxyBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJSMsgSendableProxyBuilder.m; sourceTree = "<group>"; };
+		35128C0B2812B19700814BBF /* OJSSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJSSugar.h; sourceTree = "<group>"; };
+		35128C0C2812B19700814BBF /* OJSProxyBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJSProxyBuilder.m; sourceTree = "<group>"; };
+		35128C0D2812B19700814BBF /* OJSObjCValueType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJSObjCValueType.h; sourceTree = "<group>"; };
+		35128C132812B1D700814BBF /* LKPRuntimeUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKPRuntimeUtility.m; sourceTree = "<group>"; };
+		35128C142812B1D700814BBF /* LKPRuntimeUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKPRuntimeUtility.h; sourceTree = "<group>"; };
 		3557AE63280D5166000D7568 /* LookinPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LookinPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3557AE66280D5166000D7568 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3557AE67280D5166000D7568 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -767,6 +812,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		35128BC02812B12600814BBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35128BFA2812B15E00814BBF /* LookinServer in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3557AE60280D5166000D7568 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -779,12 +832,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35128BC42812B12600814BBF /* LookinProEndpoint */ = {
+			isa = PBXGroup;
+			children = (
+				35128BC52812B12600814BBF /* AppDelegate.h */,
+				35128BC62812B12600814BBF /* AppDelegate.m */,
+				35128BC82812B12600814BBF /* SceneDelegate.h */,
+				35128BC92812B12600814BBF /* SceneDelegate.m */,
+				35128BCB2812B12600814BBF /* ViewController.h */,
+				35128BCC2812B12600814BBF /* ViewController.m */,
+				35128C142812B1D700814BBF /* LKPRuntimeUtility.h */,
+				35128C132812B1D700814BBF /* LKPRuntimeUtility.m */,
+				35128BFB2812B18600814BBF /* LookinInterceptor */,
+				35128C022812B19700814BBF /* OJS */,
+				35128BCE2812B12600814BBF /* Main.storyboard */,
+				35128BD12812B12900814BBF /* Assets.xcassets */,
+				35128BD32812B12900814BBF /* LaunchScreen.storyboard */,
+				35128BD62812B12900814BBF /* Info.plist */,
+				35128BD72812B12900814BBF /* main.m */,
+			);
+			path = LookinProEndpoint;
+			sourceTree = "<group>";
+		};
+		35128BFB2812B18600814BBF /* LookinInterceptor */ = {
+			isa = PBXGroup;
+			children = (
+				35128BFC2812B18600814BBF /* LKRequestInterceptor.h */,
+				35128BFD2812B18600814BBF /* LKAppInfoInterceptor.m */,
+				35128BFE2812B18600814BBF /* LKAppInfoInterceptor.h */,
+				35128BFF2812B18600814BBF /* LKRequestInterceptor.m */,
+			);
+			path = LookinInterceptor;
+			sourceTree = "<group>";
+		};
+		35128C022812B19700814BBF /* OJS */ = {
+			isa = PBXGroup;
+			children = (
+				35128C032812B19700814BBF /* ObjectiveJSEngine.h */,
+				35128C042812B19700814BBF /* OJSProxyObject.m */,
+				35128C052812B19700814BBF /* OJSMsgSendableProxyBuilder.h */,
+				35128C062812B19700814BBF /* OJSProxyBuilder.h */,
+				35128C072812B19700814BBF /* OJSProxyObject.h */,
+				35128C082812B19700814BBF /* ObjectiveJSEngine.m */,
+				35128C092812B19700814BBF /* OJSObjCValueType.mm */,
+				35128C0A2812B19700814BBF /* OJSMsgSendableProxyBuilder.m */,
+				35128C0B2812B19700814BBF /* OJSSugar.h */,
+				35128C0C2812B19700814BBF /* OJSProxyBuilder.m */,
+				35128C0D2812B19700814BBF /* OJSObjCValueType.h */,
+			);
+			path = OJS;
+			sourceTree = "<group>";
+		};
 		3557AE5A280D5166000D7568 = {
 			isa = PBXGroup;
 			children = (
 				355F5299280D59FF0002B1C3 /* Sparkle.xcodeproj */,
 				355F527E280D53ED0002B1C3 /* ReactiveObjC.xcodeproj */,
 				3557AE65280D5166000D7568 /* LookinPro */,
+				35128BC42812B12600814BBF /* LookinProEndpoint */,
 				3557AE64280D5166000D7568 /* Products */,
 				355F5296280D53FA0002B1C3 /* Frameworks */,
 			);
@@ -794,6 +899,7 @@
 			isa = PBXGroup;
 			children = (
 				3557AE63280D5166000D7568 /* LookinPro.app */,
+				35128BC32812B12600814BBF /* LookinProEndpoint.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -848,11 +954,11 @@
 				355F4E26280D52A70002B1C3 /* LKAppsManager.h */,
 				355F4E27280D52A70002B1C3 /* LKConnectionRequest.m */,
 				355F4E28280D52A70002B1C3 /* LKConnectionManager.h */,
-				355F4E29280D52A70002B1C3 /* LKInspectableApp.m */,
 				355F4E2A280D52A70002B1C3 /* LKAppsManager.m */,
 				355F4E2B280D52A70002B1C3 /* LKConnectionRequest.h */,
 				355F4E2C280D52A70002B1C3 /* LKConnectionManager.m */,
 				355F4E2D280D52A70002B1C3 /* LKInspectableApp.h */,
+				355F4E29280D52A70002B1C3 /* LKInspectableApp.m */,
 			);
 			path = Connection;
 			sourceTree = "<group>";
@@ -1456,6 +1562,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		35128BC22812B12600814BBF /* LookinProEndpoint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35128BF72812B12900814BBF /* Build configuration list for PBXNativeTarget "LookinProEndpoint" */;
+			buildPhases = (
+				35128BBF2812B12600814BBF /* Sources */,
+				35128BC02812B12600814BBF /* Frameworks */,
+				35128BC12812B12600814BBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LookinProEndpoint;
+			packageProductDependencies = (
+				35128BF92812B15E00814BBF /* LookinServer */,
+			);
+			productName = LookinProEndpoint;
+			productReference = 35128BC32812B12600814BBF /* LookinProEndpoint.app */;
+			productType = "com.apple.product-type.application";
+		};
 		3557AE62280D5166000D7568 /* LookinPro */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3557AE76280D5168000D7568 /* Build configuration list for PBXNativeTarget "LookinPro" */;
@@ -1483,6 +1609,9 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					35128BC22812B12600814BBF = {
+						CreatedOnToolsVersion = 13.3;
+					};
 					3557AE62280D5166000D7568 = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -1498,6 +1627,9 @@
 				"zh-Hans",
 			);
 			mainGroup = 3557AE5A280D5166000D7568;
+			packageReferences = (
+				35128BF82812B15E00814BBF /* XCRemoteSwiftPackageReference "LookinServer" */,
+			);
 			productRefGroup = 3557AE64280D5166000D7568 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -1513,6 +1645,7 @@
 			projectRoot = "";
 			targets = (
 				3557AE62280D5166000D7568 /* LookinPro */,
+				35128BC22812B12600814BBF /* LookinProEndpoint */,
 			);
 		};
 /* End PBXProject section */
@@ -1696,6 +1829,16 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		35128BC12812B12600814BBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35128BD52812B12900814BBF /* LaunchScreen.storyboard in Resources */,
+				35128BD22812B12900814BBF /* Assets.xcassets in Resources */,
+				35128BD02812B12600814BBF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3557AE61280D5166000D7568 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1712,6 +1855,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		35128BBF2812B12600814BBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35128C012812B18600814BBF /* LKRequestInterceptor.m in Sources */,
+				35128C102812B19700814BBF /* OJSObjCValueType.mm in Sources */,
+				35128BCD2812B12600814BBF /* ViewController.m in Sources */,
+				35128BC72812B12600814BBF /* AppDelegate.m in Sources */,
+				35128C122812B19700814BBF /* OJSProxyBuilder.m in Sources */,
+				35128C152812B1D700814BBF /* LKPRuntimeUtility.m in Sources */,
+				35128BD82812B12900814BBF /* main.m in Sources */,
+				35128C0F2812B19700814BBF /* ObjectiveJSEngine.m in Sources */,
+				35128C002812B18600814BBF /* LKAppInfoInterceptor.m in Sources */,
+				35128C112812B19700814BBF /* OJSMsgSendableProxyBuilder.m in Sources */,
+				35128C0E2812B19700814BBF /* OJSProxyObject.m in Sources */,
+				35128BCA2812B12600814BBF /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3557AE5F280D5166000D7568 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1899,6 +2061,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		35128BCE2812B12600814BBF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35128BCF2812B12600814BBF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		35128BD32812B12900814BBF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35128BD42812B12900814BBF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		355F52DA280D5AE50002B1C3 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1920,6 +2098,65 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		35128BD92812B12900814BBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V8K4KDZ2JN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LookinProEndpoint/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ktiays.LookinProEndpoint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		35128BDA2812B12900814BBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V8K4KDZ2JN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LookinProEndpoint/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ktiays.LookinProEndpoint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		3557AE74280D5168000D7568 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2048,6 +2285,10 @@
 				);
 				GCC_PREFIX_HEADER = "$(PROJECT)/LookinClient_PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/usr/local/include,
+				);
 				INFOPLIST_FILE = "$(PROJECT)/LookinClient_Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "https://lookin.work";
@@ -2083,6 +2324,10 @@
 				);
 				GCC_PREFIX_HEADER = "$(PROJECT)/LookinClient_PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/usr/local/include,
+				);
 				INFOPLIST_FILE = "$(PROJECT)/LookinClient_Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "https://lookin.work";
@@ -2104,6 +2349,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		35128BF72812B12900814BBF /* Build configuration list for PBXNativeTarget "LookinProEndpoint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35128BD92812B12900814BBF /* Debug */,
+				35128BDA2812B12900814BBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3557AE5E280D5166000D7568 /* Build configuration list for PBXProject "LookinPro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2123,6 +2377,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		35128BF82812B15E00814BBF /* XCRemoteSwiftPackageReference "LookinServer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QMUI/LookinServer.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		35128BF92812B15E00814BBF /* LookinServer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35128BF82812B15E00814BBF /* XCRemoteSwiftPackageReference "LookinServer" */;
+			productName = LookinServer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3557AE5B280D5166000D7568 /* Project object */;
 }

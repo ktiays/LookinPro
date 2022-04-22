@@ -6,6 +6,8 @@
 //  https://lookin.work
 //
 
+#import <objc/runtime.h>
+
 #import "LKLaunchAppView.h"
 #import "LKInspectableApp.h"
 
@@ -182,10 +184,8 @@
         self.previewImageView.image = app.appInfo.screenshot;
         if (app.appInfo.deviceType == LookinAppInfoDeviceSimulator) {
             self.iconImageView.image = NSImageMake(@"icon_simulator_big");
-        } else if (app.appInfo.deviceType == LookinAppInfoDeviceIPad) {
-            self.iconImageView.image = NSImageMake(@"icon_ipad_big");
         } else {
-            self.iconImageView.image = NSImageMake(@"icon_iphone_big");
+            self.iconImageView.image = [app deviceIcon];
         }
         self.titleLabel.stringValue = app.appInfo.deviceDescription;
         self.subtitleLabel.stringValue = [NSString stringWithFormat:@"iOS %@", app.appInfo.osDescription];

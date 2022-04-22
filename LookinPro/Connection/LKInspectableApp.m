@@ -6,6 +6,8 @@
 //  https://lookin.work
 //
 
+#import <objc/runtime.h>
+
 #import "LKInspectableApp.h"
 #import "LKConnectionManager.h"
 #import "LookinConnectionResponseAttachment.h"
@@ -113,6 +115,21 @@
     [[LKNavigationManager sharedInstance].activeMethodTraceDataSource handleReceivingRecord:record];
 }
 
+#pragma mark - Public Methods
+
+- (NSImage *)deviceIcon {
+    Class typeIconClass = objc_getClass("ISTypeIcon");
+    Method iconInitMethod = class_getInstanceMethod(typeIconClass, sel_registerName("initWithType:"));
+    NSString *deviceIconType = [self _deviceIconType];
+    if (!deviceIconType) {
+        return (_appInfo.deviceType == LookinAppInfoDeviceIPad) ? NSImageMake(@"icon_ipad_big") : NSImageMake(@"icon_iphone_big");
+    }
+    id isIcon = ((id (*)(id, SEL, NSString *)) method_getImplementation(iconInitMethod))([typeIconClass alloc], nil, deviceIconType);
+    
+    Method imageInitMethod = class_getInstanceMethod(NSImage.class, sel_registerName("initWithISIcon:"));
+    return ((NSImage * (*)(id, SEL, id)) method_getImplementation(imageInitMethod))([NSImage alloc], nil, isIcon);
+}
+
 #pragma mark - Private
 
 - (void)_pushWithType:(uint32_t)pushType data:(id)data {
@@ -147,6 +164,16 @@
         return;
     }
     [[LKConnectionManager sharedInstance] cancelRequestWithType:requestType channel:self.channel];
+}
+
+- (nullable NSString *)_deviceIconType {
+    NSNumber *deviceColor = _appInfo.deviceColor;
+    NSString *marketingName = _appInfo.marketingName;
+    if (deviceColor && marketingName) {
+        NSString *formattedMarketingName = [[marketingName stringByReplacingOccurrencesOfString:@" " withString:@"-"] lowercaseString];
+        return [NSString stringWithFormat:@"com.apple.%@-%ld", formattedMarketingName, [deviceColor integerValue]];
+    }
+    return nil;
 }
 
 @end

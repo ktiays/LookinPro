@@ -181,21 +181,21 @@ static NSString * const Key_BindingAppInfo = @"AppInfo";
         [[RACObserve([LKAppsManager sharedInstance], inspectingApp) takeUntil:item.rac_willDeallocSignal] subscribeNext:^(LKInspectableApp *app) {
             if (app) {
                 NSImage *deviceIcon;
-                CGFloat deviceIconBaseline = -4;
+                CGFloat deviceIconBaseline = 0;
                 if (app.appInfo.deviceType == LookinAppInfoDeviceSimulator) {
                     deviceIcon = NSImageMake(@"icon_simulator_small");
                     deviceIconBaseline = -2;
-                } else if (app.appInfo.deviceType == LookinAppInfoDeviceIPad) {
-                    deviceIcon = NSImageMake(@"icon_ipad_small");
                 } else {
-                    deviceIcon = NSImageMake(@"icon_iphone_small");
+                    deviceIcon = [app deviceIcon];
+                    deviceIcon.size = CGSizeMake(14, 14);
+                    deviceIconBaseline = -1.5;
                 }
                 
                 NSString *appName = app.appInfo.appName ? : NSLocalizedString(@"iOS App", nil);
                 NSAttributedString *string = $(appName).addImage(@"icon_go_forward", -3, 6, 0)
-                .addImage(deviceIcon, deviceIconBaseline, 6, 5)
-                .add([NSString stringWithFormat:@"%@ (%@)", app.appInfo.deviceDescription, app.appInfo.osDescription])
-                .attrString;
+                    .addImage(deviceIcon, deviceIconBaseline, 6, 5)
+                    .add([NSString stringWithFormat:@"%@ (%@)", app.appInfo.deviceDescription, app.appInfo.osDescription])
+                    .attrString;
                 [button setAttributedTitle:string];
                 
                 NSImage *appIcon = app.appInfo.appIcon;
