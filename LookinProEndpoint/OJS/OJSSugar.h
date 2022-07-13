@@ -8,7 +8,7 @@
 
 #define CURRENT_JSCONTEXT [JSContext currentContext]
 
-#define $(__OBJECT__) [JSValue valueWithObject:__OBJECT__ inContext:context]
+#define $(__OBJECT__) [JSValue valueWithObject:(__OBJECT__) inContext:context]
 
 #define $null [JSValue valueWithNullInContext:context]
 #define $undefined [JSValue valueWithUndefinedInContext:context]

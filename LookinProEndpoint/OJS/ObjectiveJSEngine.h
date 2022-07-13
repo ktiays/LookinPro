@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (JSValue *)debugDescriptionOfObject:(JSValue *)objectValue;
 
+JSExportAs(dynamicCastAddress,
+           - (nullable JSValue *)dynamicCastAddressToObject:(NSString *)address);
+
 #pragma mark Struct Constructor
 
 JSExportAs(makeCGPoint,

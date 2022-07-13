@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "auxiliaryexecute",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Lakr233/AuxiliaryExecute.git",
+      "state" : {
+        "revision" : "baed197de469ebfc0aaccc6074ad8a98673cebe9",
+        "version" : "1.3.0"
+      }
+    },
+    {
       "identity" : "lookinserver",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/QMUI/LookinServer.git",

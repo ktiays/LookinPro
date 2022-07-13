@@ -12,6 +12,7 @@
 #import "LookinDisplayItem.h"
 #import "LKAppsManager.h"
 #import "LKPreferenceManager.h"
+#import "LookinPro-Swift.h"
 
 @interface LKConsoleDataSource ()
 
@@ -66,6 +67,10 @@
     if (![LKAppsManager sharedInstance].inspectingApp) {
         return [RACSignal error:LookinErr_NoConnect];
     }
+    [[LKPObjcTranspiler new] jsExpressionFrom:text completionHandler:^(NSString * _Nullable expression, NSError * _Nullable error) {
+        
+    }];
+        
 //    if ([text containsString:@":"]) {
 //        NSString *className = self.currentObject.completedSelfClassName;
 //        NSString *address = self.currentObject.memoryAddress;

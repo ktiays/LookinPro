@@ -206,10 +206,14 @@
 		355F527D280D53180002B1C3 /* LookinClient_Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 355F527B280D53180002B1C3 /* LookinClient_Info.plist */; };
 		355F52D8280D5AE50002B1C3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 355F52DA280D5AE50002B1C3 /* MainMenu.xib */; };
 		355F52DD280D5B420002B1C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 355F52DF280D5B420002B1C3 /* Localizable.strings */; };
+		ED7285AF28130AC5009A19E0 /* ObjcParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7285AE28130AC5009A19E0 /* ObjcParser.swift */; };
+		ED7285B228130D95009A19E0 /* AuxiliaryExecute in Frameworks */ = {isa = PBXBuildFile; productRef = ED7285B128130D95009A19E0 /* AuxiliaryExecute */; };
 		EDEC0E5E28106F2E00BCC2C5 /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355F5289280D53ED0002B1C3 /* ReactiveObjC.framework */; };
 		EDEC0E5F28106F2E00BCC2C5 /* ReactiveObjC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 355F5289280D53ED0002B1C3 /* ReactiveObjC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EDEC0E6028106F2E00BCC2C5 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355F52B2280D59FF0002B1C3 /* Sparkle.framework */; };
 		EDEC0E6128106F2E00BCC2C5 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 355F52B2280D59FF0002B1C3 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EDFF54C12817C11600CACC3D /* ASTNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF54C02817C11600CACC3D /* ASTNode.swift */; };
+		EDFF54DF2817CA8700CACC3D /* ObjcTranspiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF54DE2817CA8700CACC3D /* ObjcTranspiler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -809,6 +813,10 @@
 		355F52DE280D5B420002B1C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		355F52E1280D5B6B0002B1C3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
 		355F52E2280D5B6B0002B1C3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		ED7285AD28130AC5009A19E0 /* LookinPro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LookinPro-Bridging-Header.h"; sourceTree = "<group>"; };
+		ED7285AE28130AC5009A19E0 /* ObjcParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjcParser.swift; sourceTree = "<group>"; };
+		EDFF54C02817C11600CACC3D /* ASTNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASTNode.swift; sourceTree = "<group>"; };
+		EDFF54DE2817CA8700CACC3D /* ObjcTranspiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjcTranspiler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -826,6 +834,7 @@
 			files = (
 				EDEC0E5E28106F2E00BCC2C5 /* ReactiveObjC.framework in Frameworks */,
 				EDEC0E6028106F2E00BCC2C5 /* Sparkle.framework in Frameworks */,
+				ED7285B228130D95009A19E0 /* AuxiliaryExecute in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,9 +866,9 @@
 		35128BFB2812B18600814BBF /* LookinInterceptor */ = {
 			isa = PBXGroup;
 			children = (
-				35128BFC2812B18600814BBF /* LKRequestInterceptor.h */,
-				35128BFD2812B18600814BBF /* LKAppInfoInterceptor.m */,
 				35128BFE2812B18600814BBF /* LKAppInfoInterceptor.h */,
+				35128BFD2812B18600814BBF /* LKAppInfoInterceptor.m */,
+				35128BFC2812B18600814BBF /* LKRequestInterceptor.h */,
 				35128BFF2812B18600814BBF /* LKRequestInterceptor.m */,
 			);
 			path = LookinInterceptor;
@@ -925,10 +934,12 @@
 				355F4E2E280D52A70002B1C3 /* Toolbar */,
 				355F4FA8280D52A80002B1C3 /* Tutorial */,
 				355F520E280D53000002B1C3 /* Shared */,
+				ED7285AC28130A79009A19E0 /* ObjCTranspiler */,
 				355F5209280D52D30002B1C3 /* Resources */,
 				3557AE66280D5166000D7568 /* AppDelegate.h */,
 				3557AE67280D5166000D7568 /* AppDelegate.m */,
 				3557AE71280D5168000D7568 /* main.m */,
+				ED7285AD28130AC5009A19E0 /* LookinPro-Bridging-Header.h */,
 			);
 			path = LookinPro;
 			sourceTree = "<group>";
@@ -1559,6 +1570,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		ED7285AC28130A79009A19E0 /* ObjCTranspiler */ = {
+			isa = PBXGroup;
+			children = (
+				ED7285AE28130AC5009A19E0 /* ObjcParser.swift */,
+				EDFF54C02817C11600CACC3D /* ASTNode.swift */,
+				EDFF54DE2817CA8700CACC3D /* ObjcTranspiler.swift */,
+			);
+			path = ObjCTranspiler;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1596,6 +1617,9 @@
 			dependencies = (
 			);
 			name = LookinPro;
+			packageProductDependencies = (
+				ED7285B128130D95009A19E0 /* AuxiliaryExecute */,
+			);
 			productName = LookinPro;
 			productReference = 3557AE63280D5166000D7568 /* LookinPro.app */;
 			productType = "com.apple.product-type.application";
@@ -1614,6 +1638,7 @@
 					};
 					3557AE62280D5166000D7568 = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 					};
 				};
 			};
@@ -1629,6 +1654,7 @@
 			mainGroup = 3557AE5A280D5166000D7568;
 			packageReferences = (
 				35128BF82812B15E00814BBF /* XCRemoteSwiftPackageReference "LookinServer" */,
+				ED7285B028130D95009A19E0 /* XCRemoteSwiftPackageReference "AuxiliaryExecute" */,
 			);
 			productRefGroup = 3557AE64280D5166000D7568 /* Products */;
 			projectDirPath = "";
@@ -1886,6 +1912,7 @@
 				355F51DA280D52AA0002B1C3 /* LKImageTextView.m in Sources */,
 				355F51CD280D52AA0002B1C3 /* LKTableView.m in Sources */,
 				355F51DB280D52AA0002B1C3 /* LKTipsView.m in Sources */,
+				ED7285AF28130AC5009A19E0 /* ObjcParser.swift in Sources */,
 				355F51F4280D52AA0002B1C3 /* LKReadWindowController.m in Sources */,
 				355F5263280D53000002B1C3 /* NSObject+Lookin.m in Sources */,
 				355F519A280D52AA0002B1C3 /* LKEnumListRegistry.m in Sources */,
@@ -1923,6 +1950,7 @@
 				355F50BE280D52A90002B1C3 /* LKWindowToolbarHelper.m in Sources */,
 				355F51E1280D52AA0002B1C3 /* LKInputSearchSuggestionItem.m in Sources */,
 				355F5198280D52AA0002B1C3 /* LKDashboardSectionView.m in Sources */,
+				EDFF54DF2817CA8700CACC3D /* ObjcTranspiler.swift in Sources */,
 				355F51C1280D52AA0002B1C3 /* LKLaunchWindowController.m in Sources */,
 				355F5201280D52AA0002B1C3 /* LKPreferenceViewController.m in Sources */,
 				355F51B9280D52AA0002B1C3 /* LookinPreviewView.m in Sources */,
@@ -2025,6 +2053,7 @@
 				355F51AD280D52AA0002B1C3 /* LKConstraintPopoverController.m in Sources */,
 				355F5278280D53000002B1C3 /* LookinAttributesSection.m in Sources */,
 				355F519C280D52AA0002B1C3 /* LKDashboardSearchPropView.m in Sources */,
+				EDFF54C12817C11600CACC3D /* ASTNode.swift in Sources */,
 				355F50B8280D52A90002B1C3 /* LKHelper.m in Sources */,
 				355F50C0280D52A90002B1C3 /* LKWindowToolbarScaleView.m in Sources */,
 				355F5202280D52AA0002B1C3 /* LKHierarchyItem.m in Sources */,
@@ -2273,6 +2302,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = LookinPro/LookinPro.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2298,11 +2328,14 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.ktiays.LookinPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "LookinPro/LookinPro-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -2312,6 +2345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = LookinPro/LookinPro.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2337,11 +2371,12 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.ktiays.LookinPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "LookinPro/LookinPro-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -2387,6 +2422,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		ED7285B028130D95009A19E0 /* XCRemoteSwiftPackageReference "AuxiliaryExecute" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lakr233/AuxiliaryExecute.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -2394,6 +2437,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 35128BF82812B15E00814BBF /* XCRemoteSwiftPackageReference "LookinServer" */;
 			productName = LookinServer;
+		};
+		ED7285B128130D95009A19E0 /* AuxiliaryExecute */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED7285B028130D95009A19E0 /* XCRemoteSwiftPackageReference "AuxiliaryExecute" */;
+			productName = AuxiliaryExecute;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

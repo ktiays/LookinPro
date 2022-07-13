@@ -9,6 +9,7 @@
 #import "OJSSugar.h"
 #import "OJSProxyBuilder.h"
 #import "OJSMsgSendableProxyBuilder.h"
+#import "LKPRuntimeUtility.h"
 
 extern NSString * ojs_descriptionOfJSValue(JSValue * value) {
     if ([value isObject]) {
@@ -16,6 +17,8 @@ extern NSString * ojs_descriptionOfJSValue(JSValue * value) {
         if ([proxy isKindOfClass:OJSProxyObject.class]) {
             return [proxy.object debugDescription];
         }
+    } else {
+        return [value debugDescription];
     }
     return nil;
 }
@@ -35,6 +38,20 @@ extern NSString * ojs_descriptionOfJSValue(JSValue * value) {
 - (JSValue *)debugDescriptionOfObject:(JSValue *)objectValue {
     JSContext *context = CURRENT_JSCONTEXT;
     return $(ojs_descriptionOfJSValue(objectValue));
+}
+
+- (nullable JSValue *)dynamicCastAddressToObject:(NSString *)address {
+    NSScanner *scanner = [NSScanner scannerWithString:address];
+    unsigned long long addressValue;
+    [scanner scanHexLongLong:&addressValue];
+    JSContext *context = CURRENT_JSCONTEXT;
+    if (!__pointer_is_valid_objc_object((void *) addressValue)) {
+        NSString *errorMessage = [NSString stringWithFormat:@"Unable to cast %@ to object.", address];
+        context.exception = $error(errorMessage);
+        return nil;
+    }
+    id object = (__bridge id) ((void *) addressValue);
+    return [OJSMsgSendableProxyBuilder builderWithObject:object inContext:context].jsValue;
 }
 
 - (JSValue *)makeCGPointWithX:(double)x y:(double)y {

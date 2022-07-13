@@ -94,7 +94,6 @@ BOOL __pointer_is_valid_objc_object(const void * ptr) {
     }
 #endif
     
-    // Check pointer alignment
     if ((pointer % sizeof(uintptr_t)) != 0) {
         return NO;
     }
@@ -103,35 +102,25 @@ BOOL __pointer_is_valid_objc_object(const void * ptr) {
         return NO;
     }
     
-    // Make sure dereferencing this address won't crash
+    // Make sure dereferencing this address won't crash.
     if (!__pointer_is_readable(ptr)) {
         return NO;
     }
     
-    // We check if the returned class is readable because object_getClass
-    // can return a garbage value when given a non-nil pointer to a non-object
     Class cls = object_getClass((__bridge id)ptr);
     if (!cls || !__pointer_is_readable((__bridge void *) cls)) {
         return NO;
     }
-    
-    // Just because this pointer is readable doesn't mean whatever is at
-    // it's ISA offset is readable. We need to do the same checks on it's ISA.
-    // Even this isn't perfect, because once we call object_isClass, we're
-    // going to dereference a member of the metaclass, which may or may not
-    // be readable itself. For the time being there is no way to access it
-    // to check here, and I have yet to hard-code a solution.
+
     Class metaclass = object_getClass(cls);
     if (!metaclass || !__pointer_is_readable((__bridge void *) metaclass)) {
         return NO;
     }
     
-    // Does the class pointer we got appear as a class to the runtime?
     if (!object_isClass(cls)) {
         return NO;
     }
     
-    // Is the allocation size at least as large as the expected instance size?
     ssize_t instanceSize = class_getInstanceSize(cls);
     if (malloc_size(ptr) < instanceSize) {
         return NO;
